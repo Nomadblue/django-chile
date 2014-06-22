@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+
 def env_var(key, default=None):
     """Retrieves env vars and makes Python boolean replacements"""
     val = os.environ.get(key, default)
@@ -44,6 +45,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
+    'gunicorn',
     'website',
 )
 
@@ -109,4 +112,3 @@ LOGGING = {
         },
     }
 }
-
