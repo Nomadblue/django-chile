@@ -59,6 +59,18 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.request',
+    'website.context_processors.template_extra_context',
+)
+
 ROOT_URLCONF = 'djangochile.urls'
 
 WSGI_APPLICATION = 'djangochile.wsgi.application'
@@ -111,4 +123,11 @@ LOGGING = {
             'propagate': True,
         },
     }
+}
+
+TEMPLATE_EXTRA_CONTEXT = {
+    # Compile LESS using client-side Javascript (only for dev envs!)
+    'use_less': env_var('USE_LESS', False),
+    # Use holder.js to dinamically render local customizable placeholders
+    'use_holder_js': env_var('USE_HOLDER_JS', False),
 }

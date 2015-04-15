@@ -1,15 +1,27 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+{% load i18n %}
+
 <html>
-<head>
-  <title>Django Chile</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <header>
-    <h1>Django Chile</h1>
-  </header>
-  <footer>
-    <p>Django Chile - Made in Chile</p>
-  </footer>
-</body>
+  <head>
+    <title>Django Chile</title>
+    <meta charset="utf-8">
+    {% if use_less %}
+      <link rel="stylesheet/less" type="text/css" media="all" href="{% static 'less/imports.less' %}">
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+    {% else %}
+      <link rel="stylesheet" type='text/css' href="{% static 'css/styles.css' %}">
+    {% endif %}
+  </head>
+  <body>
+    <div class="lead">
+      <header>
+        <h1>Django Chile</h1>
+      </header>
+    </div>
+    <footer>
+      <p>Django Chile - Made in Chile</p>
+    </footer>
+  </body>
 </html>

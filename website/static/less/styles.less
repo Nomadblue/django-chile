@@ -1,0 +1,74 @@
+// ----------------------------
+// Primary and secondary colors
+// ----------------------------
+
+@primary: hsl(189, 44.0329%, 52.3529%);
+
+// Primary Variants -
+@primaryLight:   hsl(hue(@primary), 100%, 70%);
+@primaryDark:    hsl(hue(@primary), 60%, 40%);
+@primaryFaded:   hsl(hue(@primary), 60%, 65%);
+
+// 180degree Variants
+@primaryVariant:         spin((@primary), 180);
+@primaryVariantLight:    hsl(hue(@primaryVariant), 100%, 70%);
+@primaryVariantDark:     hsl(hue(@primaryVariant), 60%, 40%);
+@primaryVariantFaded:    hsl(hue(@primaryVariant), 60%, 65%);
+
+// 90degree Variants
+@primaryCorner:         spin((@primary), 70);
+@primaryCornerLight:    hsl(hue(@primaryCorner), 100%, 70%);
+@primaryCornerDark:     hsl(hue(@primaryCorner), 60%, 40%);
+@primaryCornerFaded:    hsl(hue(@primaryCorner), 60%, 65%);
+
+@secondary: hsl(190, 62.6016%, 75.8824%);
+
+// Secondary Variants -
+@secondaryLight:   hsl(hue(@secondary), 100%, 70%);
+@secondaryDark:    hsl(hue(@secondary), 60%, 40%);
+@secondaryFaded:   hsl(hue(@secondary), 60%, 65%);
+
+// 180degree Variants
+@secondaryVariant:         spin((@secondary), 180);
+@secondaryVariantLight:    hsl(hue(@secondaryVariant), 100%, 70%);
+@secondaryVariantDark:     hsl(hue(@secondaryVariant), 60%, 40%);
+@secondaryVariantFaded:    hsl(hue(@secondaryVariant), 60%, 65%);
+ 
+// 90degree Variants
+@secondaryCorner:         spin((@secondary), 70);
+@secondaryCornerLight:    hsl(hue(@secondaryCorner), 100%, 70%);
+@secondaryCornerDark:     hsl(hue(@secondaryCorner), 60%, 40%);
+@secondaryCornerFaded:    hsl(hue(@secondaryCorner), 60%, 65%);
+
+@link-color: @primaryDark;
+
+@btn-primary-color: #fff;
+@btn-primary-bg: @secondaryCornerDark;
+@btn-primary-border: @secondaryCornerLight;
+
+// --------------------------------
+// Twitter Bootstrap customizations
+// --------------------------------
+
+@headings-font-family: Dosis;
+
+.btn-primary {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+// --------
+// NomadWeb
+// --------
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F6F6EF;
+}
+
+.lead {
+    margin-top: 0;
+    padding-top: 0;
+    background: url('../img/globe_bg.jpg') top center no-repeat;
+    min-height: 350px;
+}
